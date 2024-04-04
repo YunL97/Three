@@ -1,0 +1,17 @@
+{
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.confirmSync": false,
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Material Theme Darker",
+    "search.useIgnoreFiles": false,
+    "search.useParentIgnoreFiles": true,
+    "editor.semanticHighlighting.enabled": true,
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#252626",
+        "sideBar.foreground": "#d0dde7"
+    },
+    "workbench.editor.decorations.colors": false,
+    "editor.semanticTokenColorCustomizations": {},
+    "editor.fontSize": 15
+}

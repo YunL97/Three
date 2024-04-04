@@ -93,7 +93,9 @@ function updateMaterial() {
 
 function animate() {
     requestAnimationFrame(animate)
-
+    torusKnot.rotation.x += 0.001
+    torusKnot.rotation.z += 0.01
+    torusKnot.rotation.y += 0.01
     render()
 
     stats.update()
@@ -103,4 +105,4 @@ function render() {
     renderer.render(scene, camera)
 }
 
-animate()
+animate() 
