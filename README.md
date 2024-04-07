@@ -43,4 +43,23 @@
 * Hemisphere Light: 주변에서 발생하는 광원을 나타내는데 모든 방향에서 일정한 강도로 발생하면 전체 씬에 일관된 조명 효과를 부여하는데 사용된다
 * point light: 특점 지점에서 모든 방향으로 일정한 강도로 발생하는 광원을 나타내는데 사용
 * spot light: 특정 방향으로 집중된 광원을 생성하며 특정지점에서 발생해서 특정방향으로 빛을 쏘아올리는 형태
+* OBJ Model Loader: three.js 와 같은 3d 그래픽 라이브러리에서 사용되는 모델로더이다. object 파일 형식의 3d모댈을 로드하여 웹 애플리케이션에 표시하는데 사용된다
+* OBJ 파일: 정점, 면, 텍스처 및 재질정보를 포함하는 텍스트 파일 형식의 3d 모델을 나타낸다
+```
+ const objLoader = new ObJLoader()
+ objLoader.load(
+  'models/cube.obj',
+  (object) => {
+    scene.add(object)
+  },
+  (xhr) => {
+    console.log((xh4.loaded / xhr.total) * 100 + '% loaded') //로드율 확인할떄 효율적
+  }
+ )
+```
+* MTL Loader: OBJ 파일과 함께 사용되며 각각의 재질에 대한 정보를 포함한다.재질의 색상, 텍스처 맵, 광택, 반사율 등이 포함될 수 있다
+* GLTF Model Loader: json 기반의 포맷, 효율적이고 압축된 텍스처 및 기하 정보를 지원하며 애니메이션 및 재질 정보를 포함 가능 또한 여러개의 모델 및 재질을 하나의 파일로 결합 가능
+* GLB: GLTF는 json기반으로 파일크기가 커질수 있고 로드 및 파싱 기간이 길어질수 있음 -> glTF Binary(GLB) 이진 형식으로 변화해서 더 효율적인 파일 형식을 제공
+* GLB 이 GLTF 파일보다 크기가 작아서 GLB를 더 선호한다
+* DRACO Loader: DRACO는 giigkle에서 개발한 압축 알고리즘으로 3d 모델의 기하 정보를 효율적으로 압축하여 저장할 수 있다. 이를 통해  모델 파일의 크기를 줄이고 로드 시간 단축 가능, DRACO LOADER 은 DRACO 압축 형식으로 압축된 3d 모델을 로드하고 디코딩해서 three.js 에서 사용할 수 있는ㄴ 형식을 변환한다 -> 압축이 되어서 크기는 줄지만 디코딩이 오래걸리기 때문에 현실에서는 많이 사용하지 않는다
 * 
