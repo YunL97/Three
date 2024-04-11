@@ -1,4 +1,5 @@
-
+# three
+* 타입스크립트는 자바스크립트보다 엄격하기 때문에 에러를 더 잘잡는다
 * THREE.WebGLRenderer(): 대부분의 경우 가장 빠르고 가장 많이 지원되는 webgl 렌더러를 사용한다
 *  THREE.PerspectiveCamera
    *  첫번째인자: 시야 각도
