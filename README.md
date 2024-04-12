@@ -1,6 +1,8 @@
 # three
 * 타입스크립트는 자바스크립트보다 엄격하기 때문에 에러를 더 잘잡는다
+* renderer: 3d 장면을 렌더링 해서 화면에 표시하는 역할을 한다
 * THREE.WebGLRenderer(): 대부분의 경우 가장 빠르고 가장 많이 지원되는 webgl 렌더러를 사용한다
+* OrbitControls: OrbitControls 통해서 3d 장면을 회전하고 확대, 축소 가능
 *  THREE.PerspectiveCamera
    *  첫번째인자: 시야 각도
    *  두번째인자: 가로 세로비율
@@ -63,4 +65,3 @@
 * GLB: GLTF는 json기반으로 파일크기가 커질수 있고 로드 및 파싱 기간이 길어질수 있음 -> glTF Binary(GLB) 이진 형식으로 변화해서 더 효율적인 파일 형식을 제공
 * GLB 이 GLTF 파일보다 크기가 작아서 GLB를 더 선호한다
 * DRACO Loader: DRACO는 giigkle에서 개발한 압축 알고리즘으로 3d 모델의 기하 정보를 효율적으로 압축하여 저장할 수 있다. 이를 통해  모델 파일의 크기를 줄이고 로드 시간 단축 가능, DRACO LOADER 은 DRACO 압축 형식으로 압축된 3d 모델을 로드하고 디코딩해서 three.js 에서 사용할 수 있는ㄴ 형식을 변환한다 -> 압축이 되어서 크기는 줄지만 디코딩이 오래걸리기 때문에 현실에서는 많이 사용하지 않는다
-* 
